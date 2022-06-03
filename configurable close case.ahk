@@ -7,7 +7,7 @@ SetCoordinates(num)
 {
 MouseGetPos, xpos, ypos
 IniWrite, %xpos%, settings.ini, Coordinaten, %num%a
-IniWrite, %xpos%, settings.ini, Coordinaten, %num%b
+IniWrite, %ypos%, settings.ini, Coordinaten, %num%b
 return
 }
 
@@ -19,8 +19,10 @@ return
 MsgBox Voor de configuratie klik je na OK close case aan hierna klik je op de dropdown bij problem type en uiteidelijk de dropdown by solved by
 KeyWait, LButton, D
 SetCoordinates(1)
+KeyWait, LButton
 KeyWait, LButton, D
 SetCoordinates(2)
+KeyWait, LButton
 KeyWait, LButton, D
 SetCoordinates(3)
 return
