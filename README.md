@@ -1,0 +1,2 @@
+# configcc
+configurable close case
