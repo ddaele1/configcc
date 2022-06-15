@@ -11,6 +11,12 @@ IniWrite, %ypos%, settings.ini, Coordinaten, %num%b
 return
 }
 
+SetClicks(byref 1a, byref 1b, byref 2a, byref 2b, byref 3a, byref 3b)
+{
+; under construction
+}
+
+
 #IfWinActive ahk_exe clarify.exe  ;  hotkeys werken enkel in clarify
 
 
@@ -31,6 +37,7 @@ return
 ; muis 2 (forward) of pijltje links voor case t&i
 xButton2::
 Left::
+SetClicks(Click1a, Click1b, Click2a, Click2b, Click3a, Click3b)
 Click, %Click1a% %Click1b%
 Click, %Click2a% %Click2b%
 Send, {Home}
