@@ -2,6 +2,7 @@
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+#SingleInstance force
 
 SetCoordinates(num)
 {
@@ -41,9 +42,9 @@ SetCoordinates(3)
 return
 
 
-; muis 2 (forward) of pijltje links voor case t&i
+; muis 2 (forward) of F2 voor case t&i
 xButton2::
-Left::
+F2::
 SetClicks(Click1a, Click1b, Click2a, Click2b, Click3a, Click3b)
 Click, %Click1a% %Click1b%
 Click, %Click2a% %Click2b%
@@ -57,9 +58,9 @@ Send, {End}
 Send, {Enter}
 return
 
-; muis 1 (back) of pijltje rechts voor case idtv
+; muis 1 (back) of F3 voor case idtv
 XButton1::
-Right::
+F3::
 SetClicks(Click1a, Click1b, Click2a, Click2b, Click3a, Click3b)
 Click, %Click1a% %Click1b%
 Click, %Click2a% %Click2b%
@@ -73,10 +74,9 @@ Send, {End}
 Send, {Enter}
 return
 
-; muiswiel en pijltj omhoog(of omlaag) voor case admin(billing)
+; muiswiel en F voor case admin(billing)
 MButton::
-Up::
-Down::
+F4::
 SetClicks(Click1a, Click1b, Click2a, Click2b, Click3a, Click3b)
 Click, %Click1a% %Click1b%
 Click, %Click2a% %Click2b%
