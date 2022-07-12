@@ -30,7 +30,7 @@ SetClicks(byref 1a, byref 1b, byref 2a, byref 2b, byref 3a, byref 3b)
 
 
 ^!+c::
-MsgBox Voor de configuratie klik je na OK close case aan hierna klik je op de dropdown bij problem type en uiteidelijk de dropdown by solved by
+;MsgBox Voor de configuratie klik je na OK close case aan hierna klik je op de dropdown bij problem type en uiteidelijk de dropdown by solved by
 KeyWait, LButton, D
 SetCoordinates(1)
 KeyWait, LButton
@@ -39,6 +39,7 @@ SetCoordinates(2)
 KeyWait, LButton
 KeyWait, LButton, D
 SetCoordinates(3)
+MsgBox ,,,De instellingen zijn bewaard.,10
 return
 
 
