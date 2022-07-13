@@ -24,6 +24,8 @@ SetClicks(byref 1a, byref 1b, byref 2a, byref 2b, byref 3a, byref 3b)
 	return
 }
 
+;Close:
+;Gui, Destroy
 
 #IfWinActive ahk_exe clarify.exe  ;  hotkeys werken enkel in clarify
 
@@ -31,6 +33,15 @@ SetClicks(byref 1a, byref 1b, byref 2a, byref 2b, byref 3a, byref 3b)
 
 ^!+c::
 ;MsgBox Voor de configuratie klik je na OK close case aan hierna klik je op de dropdown bij problem type en uiteidelijk de dropdown by solved by
+;Gui, Add, Text,, Er word nu een configuratie aangemaakt
+;Gui, Add, Text,, Na op OK te klikken voer je volgende stappen uit:
+;Gui, Add, Text,, 1.Klik op de knop Close Case
+;Gui, Add, Text,, 2.Klik in het dropdown menu achter Problem Type
+;Gui, Add, Text,, 3.Klik in het dropdown menu achter Solved By
+;Gui, Add, Button,gClose,OK
+;WinGetPos, X, Y, W, H, A  ; "A" to get the active window's pos.
+;Gui, Show, x%X% y%Y% w%W% h%H%
+
 KeyWait, LButton, D
 SetCoordinates(1)
 KeyWait, LButton
