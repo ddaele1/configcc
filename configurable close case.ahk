@@ -50,7 +50,7 @@ SetCoordinates(2)
 KeyWait, LButton
 KeyWait, LButton, D
 SetCoordinates(3)
-MsgBox ,,,De instellingen zijn bewaard.,10
+MsgBox ,,,De instellingen zijn bewaard.,3
 return
 
 
